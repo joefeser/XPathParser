@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="LocationPaths_Test_Expected_Return_Values.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\src\XPathParser\XPathParser.csproj">
