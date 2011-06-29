@@ -12,7 +12,7 @@ void Main() {
 	foreach (string testCase in correctTests) {
 		RunTestString(testCase);
 	}
-	Console.WriteLine();
+	Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	
 	foreach (string testCase in correctTests) {
 		RunTestTree(testCase);
@@ -51,18 +51,26 @@ static void RunTestTree(string xpathExpr) {
 // Define other methods and classes here
  static string[] correctTests = {
 			 // Expressions from http://www.w3.org/TR/xpath#location-paths
+			@"para"                                                          ,
 			@"child::para"                                                          ,
+			@"*"                                                             ,
 			@"child::*"                                                             ,
+			@"text()"                                                        ,
 			@"child::text()"                                                        ,
+			@"node()"                                                        ,
 			@"child::node()"                                                        ,
+			@"@name"                                                      ,
 			@"attribute::name"                                                      ,
+			@"@*"                                                         ,
 			@"attribute::*"                                                         ,
 			@"descendant::para"                                                     ,
 			@"ancestor::div"                                                        ,
 			@"ancestor-or-self::div"                                                ,
 			@"descendant-or-self::para"                                             ,
 			@"self::para"                                                           ,
+			@"chapter/descendant::para"                                      ,
 			@"child::chapter/descendant::para"                                      ,
+			@"*/para"                                                 ,
 			@"child::*/child::para"                                                 ,
 			@"/"                                                                    ,
 			@"/descendant::para"                                                    ,
